@@ -81,7 +81,7 @@ contract CBDC is ERC20 {
         if(stakedTreasuryBonds[msg.sender] > 0) claimInterest(); // Claim before staking more
         stakedTimeStamp[msg.sender] = block.timestamp;
         stakedTreasuryBonds[msg.sender] += _amount;
-        transferFrom(msg.sender, address(this), _amount);
+        _transfer(msg.sender, address(this), _amount);
         emit DUSDStaked(msg.sender, _amount, block.timestamp);
     }
 
@@ -92,7 +92,7 @@ contract CBDC is ERC20 {
 
         claimInterest();
         stakedTreasuryBonds[msg.sender] -= _amount;
-        transferFrom(address(this), msg.sender, _amount);
+        _transfer(address(this), msg.sender, _amount);
         emit DUSDUnstaked(msg.sender, _amount, block.timestamp);
     }
 
