@@ -1,4 +1,4 @@
-# CBDC Smart Contract - Digital USD (DUSD)
+# 🪙 CBDC Smart Contract - Digital USD (DUSD) 🪙
 CBDC is a smart contract written in Solidity that enables the creation and management of a Central Bank Digital Currency. The contract is built on top of the ERC20 standard and uses OpenZeppelin's ERC20 implementation.
 
 
